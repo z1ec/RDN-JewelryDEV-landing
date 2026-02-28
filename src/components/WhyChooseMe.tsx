@@ -104,7 +104,7 @@ export default function WhyChooseMe() {
                 key={item.title}
                 data-value-card
                 style={{ transitionDelay: `${index * 350}ms` }}
-                className="rounded-2xl border border-white/10 bg-darkCard p-6 opacity-0 translate-y-6 transition-[opacity,transform,border-color] duration-700 ease-out will-change-transform hover:border-gold/40 [&.is-visible]:translate-y-0 [&.is-visible]:opacity-100"
+                className="rounded-2xl border border-white/10 bg-eerie p-6 opacity-0 translate-y-6 transition-[opacity,transform,border-color] duration-700 ease-out will-change-transform hover:border-gold/40 [&.is-visible]:translate-y-0 [&.is-visible]:opacity-100"
               >
                 <Icon className="h-5 w-5 text-gold" />
                 <h3 className="mt-4 font-serif text-2xl text-white">{item.title}</h3>
