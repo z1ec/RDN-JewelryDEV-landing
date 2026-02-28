@@ -7,7 +7,7 @@ export default {
         ivory: "#E5E5E0",
         eerie: "#000000ff",
         gold: "#CFA355",
-        darkCard: "#121216",
+        darkOlive: "#4e5b3c"
       },
       fontFamily: {
         serif: ['"Playfair Display"', "serif"],

@@ -127,9 +127,9 @@ export default function Services() {
             {services.map((service) => (
               <article
                 key={service.title}
-                className="rounded-2xl border border-black/10 bg-white p-7 shadow-[0_10px_30px_rgba(0,0,0,0.03)] transition duration-300 ease-out hover:border-gold/35"
+                className="rounded-2xl border border-black/10 bg-ivory p-7 shadow-[0_10px_30px_rgba(0,0,0,0.03)] transition duration-300 ease-out hover:border-gold/35"
               >
-                <div className="mb-4 h-[2px] w-10 bg-gold" />
+                <div className="mb-4 h-[2px] w-14 bg-gold" />
                 <h3 className="font-serif text-2xl">{service.title}</h3>
                 <ul className="mt-4 space-y-2 text-sm text-eerie/75">
                   {service.bullets.map((bullet) => (
