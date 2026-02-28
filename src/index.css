@@ -43,7 +43,7 @@
     inset: -35%;
     z-index: 0;
     pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect x='0' y='0' width='260' height='260' rx='92' fill='%23CFA355' fill-opacity='0.34'/%3E%3Crect x='340' y='340' width='260' height='260' rx='92' fill='%23CFA355' fill-opacity='0.34'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect x='0' y='0' width='260' height='260' rx='92' fill='%4e5b3c' fill-opacity='0.34'/%3E%3Crect x='340' y='340' width='260' height='260' rx='92' fill='%4e5b3c' fill-opacity='0.34'/%3E%3C/svg%3E");
     background-size: clamp(260px, 30vw, 560px) clamp(260px, 30vw, 560px);
     background-repeat: repeat;
     transform: rotate(25deg) scale(1.25);

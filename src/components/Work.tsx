@@ -35,7 +35,7 @@ export default function Work() {
             {portfolioItems.map((item) => (
               <article
                 key={item.title}
-                className="rounded-2xl border border-black/10 bg-white p-6 transition duration-300 ease-out hover:border-gold/35"
+                className="rounded-2xl border border-black/10 bg-ivory p-6 transition duration-300 ease-out hover:border-gold/35"
               >
                 <h3 className="font-serif text-2xl">{item.title}</h3>
                 <p className="mt-2 text-xs uppercase tracking-[0.14em] text-gold">
