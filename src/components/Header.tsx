@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 const navItems = [
   { label: "Услуги", href: "#services" },
   { label: "Кейсы", href: "#work" },
@@ -7,8 +9,49 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    let frameId = 0;
+    const directionThreshold = 8;
+
+    const updateHeaderState = () => {
+      frameId = 0;
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+
+      if (currentY <= 12) {
+        setIsHidden(false);
+      } else if (delta > directionThreshold) {
+        setIsHidden(true);
+      } else if (delta < -directionThreshold) {
+        setIsHidden(false);
+      }
+
+      lastScrollY.current = currentY;
+    };
+
+    const onScroll = () => {
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(updateHeaderState);
+    };
+
+    lastScrollY.current = window.scrollY;
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      if (frameId) window.cancelAnimationFrame(frameId);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 h-20 border-b border-black/5 bg-ivory/90 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 h-20 border-b border-black/5 bg-ivory/80 backdrop-blur transition-transform duration-300 ease-out ${
+        isHidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-6">
         <a href="#" className="font-serif text-xl font-semibold tracking-wide">
           Vladimir Dev
