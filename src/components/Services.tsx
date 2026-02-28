@@ -55,7 +55,7 @@ export default function Services() {
       );
       if (!workSection || blocks.length === 0) return;
 
-      const viewportHeight = window.innerHeight || 1;
+      const viewportHeight = document.documentElement.clientHeight || window.innerHeight || 1;
       const startLine = viewportHeight * 0.3;
       const endLine = viewportHeight * 0.7;
       const servicesRect = servicesSection.getBoundingClientRect();
@@ -80,16 +80,14 @@ export default function Services() {
 
       blocks.forEach((block) => {
         const corners = block.dataset.syncCorners;
-        block.style.marginInline = `${inset.toFixed(2)}px`;
+        const sideInset = `${inset.toFixed(2)}px`;
 
         if (corners === "top") {
-          block.style.borderTopLeftRadius = `${baseRadius}px`;
-          block.style.borderTopRightRadius = `${baseRadius}px`;
+          block.style.clipPath = `inset(0 ${sideInset} 0 ${sideInset} round ${baseRadius}px ${baseRadius}px 0 0)`;
         }
 
         if (corners === "bottom") {
-          block.style.borderBottomLeftRadius = `${baseRadius}px`;
-          block.style.borderBottomRightRadius = `${baseRadius}px`;
+          block.style.clipPath = `inset(0 ${sideInset} 0 ${sideInset} round 0 0 ${baseRadius}px ${baseRadius}px)`;
         }
       });
     };
@@ -115,7 +113,7 @@ export default function Services() {
       <div
         data-sync-black-block
         data-sync-corners="top"
-        className="bg-eerie py-20 will-change-[margin,border-radius]"
+        className="bg-eerie py-20 will-change-[clip-path]"
       >
         <div className="mx-auto max-w-[1200px] px-6">
           <p className="text-sm uppercase tracking-[0.18em] text-ivory/60">Услуги</p>

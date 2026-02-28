@@ -25,7 +25,7 @@ export default function Work() {
       <div
         data-sync-black-block
         data-sync-corners="bottom"
-        className="bg-eerie py-20 will-change-[margin,border-radius]"
+        className="bg-eerie py-20 will-change-[clip-path]"
       >
         <div className="mx-auto max-w-[1200px] px-6">
           <p className="text-sm uppercase tracking-[0.18em] text-ivory/60">Кейсы</p>
