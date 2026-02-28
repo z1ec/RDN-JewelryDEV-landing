@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
@@ -53,8 +54,37 @@ const valueProps = [
 ];
 
 export default function WhyChooseMe() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const cards = Array.from(section.querySelectorAll<HTMLElement>("[data-value-card]"));
+    if (!cards.length) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      cards.forEach((card) => card.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="bg-ivory py-20">
+    <section ref={sectionRef} className="bg-ivory py-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <p className="text-sm uppercase tracking-[0.18em] text-black/60">Почему я</p>
         <div className="relative max-w-[300px] md:max-w-[500px]">
@@ -67,12 +97,14 @@ export default function WhyChooseMe() {
 
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {valueProps.map((item) => {
+          {valueProps.map((item, index) => {
             const Icon = item.icon;
             return (
               <article
                 key={item.title}
-                className="rounded-2xl border border-white/10 bg-darkCard p-6 transition duration-300 ease-out hover:border-gold/40"
+                data-value-card
+                style={{ transitionDelay: `${index * 350}ms` }}
+                className="rounded-2xl border border-white/10 bg-darkCard p-6 opacity-0 translate-y-6 transition-[opacity,transform,border-color] duration-700 ease-out will-change-transform hover:border-gold/40 [&.is-visible]:translate-y-0 [&.is-visible]:opacity-100"
               >
                 <Icon className="h-5 w-5 text-gold" />
                 <h3 className="mt-4 font-serif text-2xl text-white">{item.title}</h3>
