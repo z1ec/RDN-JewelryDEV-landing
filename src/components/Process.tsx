@@ -43,9 +43,13 @@ export default function Process() {
     <section ref={sectionRef} id="process" className="bg-ivory py-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <p className="text-sm uppercase tracking-[0.18em] text-eerie/60">Процесс</p>
-        <h2 className="mt-4 font-serif text-3xl md:text-4xl">
-          Принцип работы над вашим проектом
-        </h2>
+        <div className="relative md:max-w-[700px]">
+          <div className="absolute -left-4 -bottom-4 mt-6 h-6 w-8 border-l-2 border-b-2 border-gold" />
+          <h2 className="mt-4 font-serif text-3xl md:text-4xl">
+            Принцип работы над вашим проектом
+          </h2>
+          <div className="absolute right-4 md:right-2 -top-8 mt-6 h-6 w-8 border-r-2 border-t-2 border-gold" />
+        </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-6">
           {steps.map((step, index) => (
