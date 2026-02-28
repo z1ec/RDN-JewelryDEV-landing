@@ -8,8 +8,18 @@ export default function About() {
   return (
     <section id="about" className="py-20">
       <div className="mx-auto max-w-[1200px] rounded-2xl border border-black/10 bg-white px-6 py-10 shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
-        <p className="text-sm uppercase tracking-[0.18em] text-eerie/60">Обо мне</p>
-        <h2 className="mt-4 font-serif text-3xl md:text-4xl">
+        <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <p className="text-sm uppercase tracking-[0.18em] text-eerie/60">Обо мне</p>
+          <a
+            href="https://fomin-vladimir.ru"
+            target="_blank"
+            rel="noreferrer"
+            className="w-fit rounded-full bg-eerie px-5 py-2.5 text-sm text-ivory transition duration-300 ease-out hover:bg-gold hover:text-eerie"
+          >
+            Ссылка на моё портфолио
+          </a>
+        </div>
+        <h2 className="mt-2 font-serif text-3xl md:text-4xl">
           Я создаю готовые решения для бизнеса
         </h2>
         <p className="mt-4 max-w-3xl text-eerie/75 max-w-[600px]">
