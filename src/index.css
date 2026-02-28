@@ -15,6 +15,21 @@
 }
 
 @layer components {
+  @keyframes softGeoLava {
+    0% {
+      transform: rotate(25deg) scale(1.22) translate3d(-2%, -1%, 0);
+      background-position: 0% 0%;
+    }
+    50% {
+      transform: rotate(28deg) scale(1.28) translate3d(2%, 1%, 0);
+      background-position: 5% 4%;
+    }
+    100% {
+      transform: rotate(23deg) scale(1.24) translate3d(-1%, 2%, 0);
+      background-position: -4% 7%;
+    }
+  }
+
   .soft-geo-bg {
     position: relative;
     isolation: isolate;
@@ -35,10 +50,18 @@
     transform-origin: center;
     filter: blur(20px);
     opacity: 0.36;
+    animation: softGeoLava 34s ease-in-out infinite alternate;
+    will-change: transform, background-position;
   }
 
   .soft-geo-bg > * {
     position: relative;
     z-index: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .soft-geo-bg::before {
+      animation: none;
+    }
   }
 }
