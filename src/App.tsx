@@ -22,10 +22,12 @@ function App() {
         <Hero />
         <WhyChooseMe />
         <Services />
-        <Work />
-        <Process />
-        <About />
-        <Contact />
+        <div className="soft-geo-bg">
+          <Work />
+          <Process />
+          <About />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </div>

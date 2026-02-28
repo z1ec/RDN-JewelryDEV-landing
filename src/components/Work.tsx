@@ -21,7 +21,7 @@ const portfolioItems = [
 
 export default function Work() {
   return (
-    <section id="work" className="bg-ivory pb-20">
+    <section id="work" className="pb-20">
       <div
         data-sync-black-block
         data-sync-corners="bottom"

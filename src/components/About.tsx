@@ -6,7 +6,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-ivory py-20">
+    <section id="about" className="py-20">
       <div className="mx-auto max-w-[1200px] rounded-2xl border border-black/10 bg-white px-6 py-10 shadow-[0_10px_30px_rgba(0,0,0,0.03)]">
         <p className="text-sm uppercase tracking-[0.18em] text-eerie/60">Обо мне</p>
         <h2 className="mt-4 font-serif text-3xl md:text-4xl">

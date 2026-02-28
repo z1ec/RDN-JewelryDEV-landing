@@ -40,7 +40,7 @@ export default function Process() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="process" className="bg-ivory py-20">
+    <section ref={sectionRef} id="process" className="py-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <p className="text-sm uppercase tracking-[0.18em] text-eerie/60">Процесс</p>
         <div className="relative md:max-w-[700px]">
