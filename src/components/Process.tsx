@@ -57,15 +57,15 @@ export default function Process() {
               key={step}
               data-step-card
               style={{ transitionDelay: `${index * 140}ms` }}
-              className="relative rounded-2xl border border-black/10 bg-white p-5 text-center opacity-0 translate-y-6 transition-[opacity,transform,border-color] duration-500 ease-out will-change-transform [&.is-visible]:translate-y-0 [&.is-visible]:opacity-100"
+              className="relative rounded-2xl border border-black/10 bg-eerie p-5 text-center opacity-0 translate-y-6 transition-[opacity,transform,border-color] duration-500 ease-out will-change-transform [&.is-visible]:translate-y-0 [&.is-visible]:opacity-100"
             >
               {index < steps.length - 1 && (
-                <div className="absolute -right-4 top-1/2 hidden h-[1px] w-4 bg-gold lg:block" />
+                <div className="absolute -right-6 top-1/2 hidden h-[5px] w-6 bg-eerie lg:block" />
               )}
               <p className="text-xs uppercase tracking-[0.14em] text-gold">
                 Этап {index + 1}
               </p>
-              <p className="mt-2 text-sm text-eerie/80">{step}</p>
+              <p className="mt-2 text-sm text-white">{step}</p>
             </div>
           ))}
         </div>
