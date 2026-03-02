@@ -1,6 +1,6 @@
 const portfolioItems = [
   {
-    title: "Aurielle Fine Jewelry (демо)",
+    title: "Avrora Atelier",
     stack: "React, TypeScript, Shopify API",
     done: "Собран премиальный UI каталога, фильтры и конверсионные карточки товаров.",
     result: "Концепт / демо: +22% к добавлению в корзину (модельный результат).",
