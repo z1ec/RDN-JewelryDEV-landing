@@ -42,15 +42,15 @@ export default function Contact() {
           <div className="mt-5 space-y-3 text-sm">
             <a
               className="block text-eerie/75 transition hover:text-gold"
-              href="mailto:hello@vladimir.dev"
+              href="mailto:vav3538@gmail.com"
             >
-              hello@vladimir.dev
+              vav3538@gmail.com
             </a>
             <a
               className="block text-eerie/75 transition hover:text-gold"
-              href="https://t.me/yourhandle"
+              href="https://t.me/f44gh"
             >
-              Телеграм: @yourhandle
+              Телеграм: @F44gh
             </a>
           </div>
         </aside>

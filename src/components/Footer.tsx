@@ -5,7 +5,7 @@ const links = [
   { label: "Обо мне", href: "#about" },
   { label: "Контакты", href: "#contact" },
 ];
-const socials = ["LinkedIn", "Dribbble", "GitHub"];
+const socials = ["Instagram", "Telegram", "GitHub"];
 
 export default function Footer() {
   return (

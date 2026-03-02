@@ -15,21 +15,21 @@ const portfolioItems = [
     title: "Avrora Landing 1",
     description:
       "Имиджевый лендинг с крупными фотоблоками, точечной типографикой и акцентом на историю бренда.",
-    link: "#",
+    link: "https://z1ec.github.io/RDN-example-avrora",
     images: [avroraLanding10, avroraLanding11, avroraLanding12, avroraLanding13],
   },
   {
     title: "Avrora Landing 2",
     description:
       "Вариант лендинга с упором на визуальные коллекции, видео контента и последовательный сценарий просмотра.",
-    link: "#",
+    link: "https://z1ec.github.io/RDN-example-avrora-2",
     images: [avroraLanding20, avroraLanding21, avroraLanding22, avroraLanding23],
   },
   {
     title: "InSales",
     description:
       "E-commerce сайты, для бизнеса на базе InSales. Удобный вариант для быстрого старта продаж.",
-    link: "#",
+    link: "https://www.insales.ru",
     images: [insales0, insales1],
   },
 ];
