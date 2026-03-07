@@ -44,7 +44,13 @@ export default function Contact() {
               className="block text-eerie/75 transition hover:text-gold"
               href="mailto:vav3538@gmail.com"
             >
-              vav3538@gmail.com
+              Почта: vav3538@gmail.com
+            </a>
+            <a
+              className="block text-eerie/75 transition hover:text-gold"
+              href="https://fomin-vladimir.ru"
+            >
+              Портфолио: fomin-vladimir.ru
             </a>
             <a
               className="block text-eerie/75 transition hover:text-gold"
